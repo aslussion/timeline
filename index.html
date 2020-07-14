@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>t</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet/less" type="text/css" href="css/style.less">
+		<script src="js/j.js"></script>
+		<script src="js/less-1.7.3.min.js"></script>
+	</head>
+	<body>
+		<div class='container'>
+			<div class='tl' id='j-timeline'>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 1</span></div>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 2</span></div>
+				<div class='tl__step tl__step_process '><span class='tl__step-points'></span><span class='tl__step-text'>Step 3</span></div>
+				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
+			</div>
+
+			<table>
+				<tr>
+					<td>Text position:</td>
+					<td>
+						<select id='j-changeText'>
+							<option>top</option>
+							<option value='b'>bottom</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Label position:</td>
+					<td>
+						<select id='j-changeLabel'>
+							<option>center</option>
+							<option value='p'>close to point</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><span id='j-addStep' class='button'>Add step</span> with status:</td>
+					<td>
+						<select id='j-status'>
+							<option>start</option>
+							<option value='p'>process</option>
+							<option value='d'>done</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+
+			<br>
+			<hr>
+			Demo:
+			<br><br>
+			<div class='tl tl_point-center'>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 1</span></div>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 2</span></div>
+				<div class='tl__step tl__step_process '><span class='tl__step-points'></span><span class='tl__step-text'>Step 3</span></div>
+				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
+			</div>
+			<div class='tl'>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 1</span></div>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 2</span></div>
+				<div class='tl__step tl__step_process '><span class='tl__step-points'></span><span class='tl__step-text'>Step 3</span></div>
+				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
+			</div>
+			<div class='tl tl_point-center tl_text-bottom'>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 1</span></div>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 2</span></div>
+				<div class='tl__step tl__step_process '><span class='tl__step-points'></span><span class='tl__step-text'>Step 3</span></div>
+				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
+			</div>
+			<div class='tl tl_text-bottom'>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 1</span></div>
+				<div class='tl__step tl__step_done '><span class='tl__step-points'></span><span class='tl__step-text'>Step 2</span></div>
+				<div class='tl__step tl__step_process '><span class='tl__step-points'></span><span class='tl__step-text'>Step 3</span></div>
+				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
+			</div>
+
+		</div>
+	</body>
+</html>
+
+				
