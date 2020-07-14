@@ -1,1 +1,1 @@
-<a href='https://aslussion.github.io/timeline/production/index.html'>Demo</a>
+<a href='https://aslussion.github.io/timeline/index.html'>Demo</a>
