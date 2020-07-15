@@ -136,6 +136,8 @@
 		left: 0;
 		width: 100%;
 	}
+	//focus is for IE
+	&:focus,
 	&:active{top:1px;}
 }
 .buttons-table{
@@ -146,4 +148,11 @@
 		padding:10px 5px;
 	}
 	tr:hover td{background:@cGrayBcg;}
+
+	&,
+	tbody,
+	tr,
+	td{
+		position: static;//border+background for mozilla
+	}
 }
