@@ -7,152 +7,152 @@
 @cBlueBtn:#007BFF;
 
 *{
-	position:relative;
-	margin:0px;
-	padding:0px;
-	outline: none;
+  position:relative;
+  margin:0px;
+  padding:0px;
+  outline: none;
 }
 .container{
-	padding: 0 15px;
+  padding: 0 15px;
 }
 
 .tl{
-	display: table;
-	width: 100%;
-	padding:25px 5px 20px;
-	box-sizing:border-box;
-	margin-bottom: 25px;
-	&__step{
-		display: table-cell;
-		&-points{
-			display: block;
-			height: 2px;
-			background:@cGray;
-			
-			@l:-5px;
-			&:before,
-			&:after{
-				@s:10px;
-				content: '';
-				position:absolute;
-				top:-4px;
-				left:@l;
-				z-index: 1;
-				display: inline-block;
-				width:@s;
-				height:@s;
-				box-sizing:border-box;
-				border:2px solid @cGray;
-				border-radius: 50%;
-				background:white;
-				box-shadow: 0 0 0 2px white;
-			}
-			&:after{
-				left:auto;
-				right:@l;
-			}
-		}
-		&-text{
-			position:absolute;
-			top:-20px;
-			left:0;
-			width: 100%;
-			white-space: nowrap;
-			text-align: center;
-			color:@cGrayText;
-			font:13px Helvetica, sans-serif;
-		}
-	
-		//statuses
-		&_process{
-			.stepColored(@cOrange);
-		}
-		&_done{
-			.stepColored(@cGreen);
-		}
+  display: table;
+  width: 100%;
+  padding:25px 5px 20px;
+  box-sizing:border-box;
+  margin-bottom: 25px;
+  &__step{
+    display: table-cell;
+    &-points{
+      display: block;
+      height: 2px;
+      background:@cGray;
+      
+      @position:-5px;//point's left or right position
+      &:before,
+      &:after{
+        @size:10px;
+        content: '';
+        position:absolute;
+        top:-4px;
+        left:@position;
+        z-index: 1;
+        display: inline-block;
+        width:@size;
+        height:@size;
+        box-sizing:border-box;
+        border:2px solid @cGray;
+        border-radius: 50%;
+        background:white;
+        box-shadow: 0 0 0 2px white;
+      }
+      &:after{
+        left:auto;
+        right:@position;
+      }
+    }
+    &-text{
+      position:absolute;
+      top:-20px;
+      left:0;
+      width: 100%;
+      white-space: nowrap;
+      text-align: center;
+      color:@cGrayText;
+      font:13px Helvetica, sans-serif;
+    }
+  
+    //statuses
+    &_process{
+      .stepColored(@cOrange);
+    }
+    &_done{
+      .stepColored(@cGreen);
+    }
 
-	}
+  }
 
-	//types
-	&_text-bottom{
-		.tl__step-text{top:7px;}
-	}
+  //types
+  &_text-bottom{
+    .tl__step-text{top:7px;}
+  }
 
-	&_point-center{
-		.tl__step{
-			&-text{
-				width: auto;
-				transform:translateX(-50%);
-			}
+  &_point-center{
+    .tl__step{
+      &-text{
+        width: auto;
+        transform:translateX(-50%);
+      }
 
-			&:nth-last-child(2){
-				width: 1px;
-				z-index: 2;
-			}
-			&:first-child,
-			&:last-child{
-				.tl__step-text{transform:none;}
-			}
-			&:last-child .tl__step-text{
-				left:auto;
-				right:0;
-			}
-		}
-	}
+      &:nth-last-child(2){
+        width: 1px;
+        z-index: 2;
+      }
+      &:first-child,
+      &:last-child{
+        .tl__step-text{transform:none;}
+      }
+      &:last-child .tl__step-text{
+        left:auto;
+        right:0;
+      }
+    }
+  }
 }
 
-.stepColored(@c){
-	.tl__step-points{
-		background:@c;
-		&:before,
-		&:after{
-			border-color:@c;
-			background:@c;
-		}
-	}
+.stepColored(@colour){
+  .tl__step-points{
+    background:@colour;
+    &:before,
+    &:after{
+      border-color:@colour;
+      background:@colour;
+    }
+  }
 }
 
 .button{
-	display: inline-block;
-	padding:5px 10px;
-	background:@cBlueBtn;
-	color:@cWhite;
-	cursor: pointer;
+  display: inline-block;
+  padding:5px 10px;
+  background:@cBlueBtn;
+  color:@cWhite;
+  cursor: pointer;
 
-	&__text{z-index: 2}
+  &__text{z-index: 2}
 
-	&:before{
-		content: "";
-		position: absolute;
-		bottom: 0;
+  &:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
         right: 0;
         z-index: 1;
-		width: 0;
+    width: 0;
         height: 100%;
         background: darken(@cBlueBtn, 15%);
         transition: all .3s;
-	}
-	&:hover:before{
-		left: 0;
-		width: 100%;
-	}
-	//focus is for IE
-	&:focus,
-	&:active{top:1px;}
+  }
+  &:hover:before{
+    left: 0;
+    width: 100%;
+  }
+  //focus is for IE
+  &:focus,
+  &:active{top:1px;}
 }
 .buttons-table{
-	border-collapse: collapse;
-	border-spacing: 0px;
-	td{
-		border:1px solid;
-		padding:10px 5px;
-	}
-	tr:hover td{background:@cGrayBcg;}
+  border-collapse: collapse;
+  border-spacing: 0px;
+  td{
+    border:1px solid;
+    padding:10px 5px;
+  }
+  tr:hover td{background:@cGrayBcg;}
 
-	&,
-	tbody,
-	tr,
-	td{
-		position: static;//border+background for mozilla
-	}
+  &,
+  tbody,
+  tr,
+  td{
+    position: static;//border+background for mozilla
+  }
 }
