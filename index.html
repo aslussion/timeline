@@ -18,7 +18,7 @@
 				<div class='tl__step'><span class='tl__step-points'></span><span class='tl__step-text'>Step 4</span></div>
 			</div>
 
-			<table>
+			<table class='buttons-table'>
 				<tr>
 					<td>Text position:</td>
 					<td>
@@ -38,14 +38,21 @@
 					</td>
 				</tr>
 				<tr>
-					<td><span id='j-addStep' class='button'>Add step</span> with status:</td>
+					<td>Add step:</td>
 					<td>
+						Choose status:
 						<select id='j-status'>
 							<option>start</option>
 							<option value='p'>process</option>
 							<option value='d'>done</option>
 						</select>
+						and 
+						<span class='button' id='j-addStep'><span class='button__text'>click</span></span>
 					</td>
+				</tr>
+				<tr>
+					<td>Delete last step:</td>
+					<td><span class='button' id='j-deleteStep'><span class='button__text'>Click</span></span></td>
 				</tr>
 			</table>
 
